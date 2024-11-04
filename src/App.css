@@ -1,3 +1,12 @@
+* {
+  background-color: black;
+  color: white;
+}
+
+button {
+  color: black;
+}
+
 ul {
   display: flex;
   flex-wrap: wrap;
