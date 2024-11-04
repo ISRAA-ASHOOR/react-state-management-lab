@@ -120,7 +120,7 @@ const App = () => {
     {/* Condition to show the team members */}
     <h3><strong>Team:</strong></h3>
     {/* it true show the following message */}
-        {team.length === 0 ? (<p>Pick some team members</p>) : (
+        {team.length === 0 ? <p>Pick some team members</p> : 
           // if the length is not 0 which means that we have members , show each member info 
           <ul>
             {team.map((member , id) => (
@@ -133,7 +133,7 @@ const App = () => {
                   <button onClick={() => handleRemoveFighter(id)}>Remove</button>
               </li>
             ))}
-          </ul> )}
+          </ul> }
         {/* showing all the zombieFighters */}
         <h3>Fighters:</h3>
       <ul>
