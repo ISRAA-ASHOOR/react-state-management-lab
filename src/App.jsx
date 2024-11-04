@@ -119,7 +119,7 @@ const App = () => {
     <h3><strong>Team Agility:</strong> {totalAgility}</h3>
     {/* Condition to show the team members */}
     <h3><strong>Team:</strong></h3>
-    {/* it truee show the following message */}
+    {/* it true show the following message */}
         {team.length === 0 ? (<p>Pick some team members</p>) : (
           // if the length is not 0 which means that we have members , show each member info 
           <ul>
