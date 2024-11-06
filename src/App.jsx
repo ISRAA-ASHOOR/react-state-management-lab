@@ -99,14 +99,14 @@ const App = () => {
       setTotalAgility(totalAgility + zombieFighter.agility);
     }
   };
-
-// to remove fighters I added id to each zombieFighter in the zombieFighters Array ( it did not work without id )
-
-  const handleRemoveFighter = (index) => {
-    // found a new way to make the remove succesful from (https://www.dhiwise.com/post/ultimate-guide-to-deleting-items-from-arrays-in-react)
-    const updatedTeam = [...team];
-    updatedTeam.splice(index, 1);
-    setTeam(updatedTeam);
+  // id is added to make it work ( it's not working without id )
+  const handleRemoveFighter = (id) => {
+     const removedFighter = team.find((zombieFighter) => zombieFighter.id === id);
+     const updatedTeam = team.filter((zombieFighter) => zombieFighter.id !== id);
+     setTeam(updatedTeam);
+     setMoney(money + removedFighter.price);
+     setTotalStrength(totalStrength - removedFighter.strength);
+     setTotalAgility(totalAgility - removedFighter.agility);
   };
 
   return (
